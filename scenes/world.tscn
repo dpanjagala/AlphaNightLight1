@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://bk42qmine6o0p"]
 
-[ext_resource type="Texture2D" uid="uid://6s1o8wnujmkj" path="res://char and prop/tilesets/plains.png" id="1_tlwt5"]
-[ext_resource type="Texture2D" uid="uid://bvu7qte2am2le" path="res://char and prop/tilesets/grass.png" id="2_aqk2v"]
-[ext_resource type="Texture2D" uid="uid://dc34w7kxg4m63" path="res://char and prop/objects/objects.png" id="3_036b0"]
-[ext_resource type="PackedScene" uid="uid://dbqikwa8kwmef" path="res://NightLight1/player.tscn" id="4_aqk2v"]
-[ext_resource type="Texture2D" uid="uid://bto6vp8fg7m71" path="res://char and prop/tilesets/fences.png" id="4_dwbse"]
-[ext_resource type="Texture2D" uid="uid://b2fdq1kpmfykl" path="res://NightLight1/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Campfire/spr_campfire_idle.png" id="5_pkg7o"]
-[ext_resource type="PackedScene" uid="uid://cet5a4863rh3b" path="res://enemy.tscn" id="7_pkg7o"]
+[ext_resource type="Texture2D" uid="uid://6s1o8wnujmkj" path="res://char and prop/tilesets/plains.png" id="1_i7141"]
+[ext_resource type="Texture2D" uid="uid://bvu7qte2am2le" path="res://char and prop/tilesets/grass.png" id="2_4mrxx"]
+[ext_resource type="Texture2D" uid="uid://dc34w7kxg4m63" path="res://char and prop/objects/objects.png" id="3_7r4gi"]
+[ext_resource type="Texture2D" uid="uid://bto6vp8fg7m71" path="res://char and prop/tilesets/fences.png" id="4_w7kh3"]
+[ext_resource type="Texture2D" uid="uid://b2fdq1kpmfykl" path="res://NightLight1/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Campfire/spr_campfire_idle.png" id="5_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://dbqikwa8kwmef" path="res://NightLight1/player.tscn" id="6_q5onr"]
+[ext_resource type="PackedScene" uid="uid://cet5a4863rh3b" path="res://scenes/enemy.tscn" id="7_jhx03"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwbse"]
-texture = ExtResource("1_tlwt5")
+texture = ExtResource("1_i7141")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -40,11 +40,11 @@ texture = ExtResource("1_tlwt5")
 5:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkg7o"]
-texture = ExtResource("2_aqk2v")
+texture = ExtResource("2_4mrxx")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbfbk"]
-texture = ExtResource("3_036b0")
+texture = ExtResource("3_7r4gi")
 0:0/0 = 0
 0:0/0/y_sort_origin = 9
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.31863, -0.63726, 0, 8, -0.31863, 0, 8)
@@ -186,7 +186,7 @@ texture = ExtResource("3_036b0")
 11:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioo17"]
-texture = ExtResource("4_dwbse")
+texture = ExtResource("4_w7kh3")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -205,7 +205,7 @@ texture = ExtResource("4_dwbse")
 3:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wse8f"]
-texture = ExtResource("5_pkg7o")
+texture = ExtResource("5_e3hyu")
 0:2/size_in_atlas = Vector2i(2, 2)
 0:2/0 = 0
 0:2/0/y_sort_origin = 5
@@ -238,8 +238,8 @@ layer_2/name = "ysort"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(65544, 2, 5, 1245210, 2, 5, 1245186, 2, 5, 131116, 2, 5, 786486, 2, 5, 393249, 2, 5, 589864, 524290, 6, 393237, 524290, 6, 131074, 524290, 6, 589837, 524290, 6, 1179687, 524290, 6, 1310748, 393218, 7, 1310744, 393218, 7, 65573, 393218, 7, 65575, 393218, 7, 262157, 393218, 7, 262159, 655362, 7, 262161, 393218, 7, 1310736, 655362, 7, 131101, 655362, 7, 262169, 2, 0, 1179683, 2, 0, 1048583, 2, 0, 393270, 2, 0, 65594, 393218, 7, 65590, 655362, 7, 131128, 2, 1, 131127, 2, 1, 1179701, 2, 1, 1310742, 2, 1, 131082, 2, 1, 1376257, 2, 1, 196611, 2, 1, 720954, 2, 1, 1638461, 2, 5, 196675, 2, 5, 1638434, 524290, 6, 1638435, 524290, 6, 1638436, 524290, 6, 1638437, 524290, 6, 1638438, 524290, 6, 1638439, 524290, 6, 1704001, 655362, 7, 196671, 2, 1, 1572932, 2, 1, 1703991, 2, 0, 786479, 4, 2, 2359308, 2, 5, 2359342, 2, 5, 2424876, 393218, 7, 2424880, 393218, 7, 2555971, 393218, 7, 2555906, 2, 1, 2555907, 2, 0, 1966084, 2, 0)
 
-[node name="player" parent="." instance=ExtResource("4_aqk2v")]
+[node name="player" parent="." instance=ExtResource("6_q5onr")]
 position = Vector2(32, 136)
 
-[node name="enemy" parent="." instance=ExtResource("7_pkg7o")]
+[node name="enemy" parent="." instance=ExtResource("7_jhx03")]
 position = Vector2(646, 224)
