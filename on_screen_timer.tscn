@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://k6okrqn463em"]
+
+[node name="onScreenTimer" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_top = -1.0
+offset_right = 410.0
+offset_bottom = 159.0
+text = "05:00"
+
+[node name="Timer" type="Timer" parent="."]

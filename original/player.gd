@@ -10,11 +10,12 @@ const SPEED = 100
 var current_dir = "none"
 
 @onready var anim = $AnimatedSprite2D
-@onready var deal_attack_timer = $deal_attack_timer  # ✅ Prevents null instance error
+@onready var deal_attack_timer = $deal_attack_timer 
 
 func _ready():
+	anim.scale = Vector2(2, 2) 
 	anim.play("front_idle")
-	print("🔍 deal_attack_timer is: ", deal_attack_timer)  # Debug to confirm timer exists
+	print("🔍 deal_attack_timer is: ", deal_attack_timer) 
 
 func _physics_process(delta):
 	if player_alive:

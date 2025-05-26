@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bvcgyjnmq8y3m" path="res://player_hitbox.gd" id="2_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
-radius = 7.05448
+radius = 47.5026
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
 atlas = ExtResource("1_g2els")
@@ -417,29 +417,32 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
-radius = 13.0384
+radius = 60.026
 
 [node name="player" type="CharacterBody2D"]
+position = Vector2(50, 50)
+scale = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(0, -0.125)
+position = Vector2(-15.25, -10.5)
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_4flbx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
-position = Vector2(0, -10)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-12.5, -34.25)
+scale = Vector2(3.50521, 3.27474)
 sprite_frames = SubResource("SpriteFrames_pfmca")
-animation = &"front_attack"
+animation = &"front_idle"
 speed_scale = 0.5
 
 [node name="player_hitbox" type="Area2D" parent="."]
 script = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-position = Vector2(0, -5)
+position = Vector2(-12, -11.25)
 shape = SubResource("CircleShape2D_onrkg")
 
 [node name="attack_cooldown" type="Timer" parent="."]
