@@ -1,6 +1,6 @@
 [gd_scene load_steps=44 format=3 uid="uid://dbqikwa8kwmef"]
 
-[ext_resource type="Script" uid="uid://gi7ytj6wnady" path="res://NightLight1/player.gd" id="1_2ctjv"]
+[ext_resource type="Script" uid="uid://gi7ytj6wnady" path="res://original/player.gd" id="1_2ctjv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nty71"]
 radius = 16.0312
@@ -334,3 +334,12 @@ sprite_frames = SubResource("SpriteFrames_nty71")
 animation = &"front_walk"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, -18)
+limit_left = 0
+limit_top = 0
+limit_right = 4532
+limit_bottom = 2040
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

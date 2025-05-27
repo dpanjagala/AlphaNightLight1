@@ -6,14 +6,15 @@ var player = null
 
 var health = 100
 var player_inattack_zone = false
+var can_take_damage = true
 
 func _ready():
-	$AnimatedSprite2D.scale = Vector2(2, 2) 
-
+	$AnimatedSprite2D.scale = Vector2(2, 2)
 
 func _physics_process(delta):
 	deal_with_damage()
-	
+	update_health() 
+
 	if player_chase and player:
 		var direction = (player.position - position).normalized()
 		velocity = direction * speed
@@ -38,7 +39,7 @@ func _on_detection_area_body_entered(body):
 func _on_detection_area_body_exited(body):
 	player = null
 	player_chase = false
-	
+
 func _on_enemy_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_inattack_zone = true
@@ -46,10 +47,25 @@ func _on_enemy_hitbox_body_entered(body: Node2D) -> void:
 func _on_enemy_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_inattack_zone = false
-		
-func deal_with_damage(): 
-	if player_inattack_zone and Global.player_current_attack == true:
-		health = health - 20
-		print("slime health = ", health)
+
+func deal_with_damage():
+	if player_inattack_zone and Global.player_current_attack == true and can_take_damage:
+		health -= 20
+		$take_damage_cooldown.start()
+		can_take_damage = false
+		print("slime health =", health)
 		if health <= 0:
 			self.queue_free()
+
+func _on_take_damage_cooldown_timeout() -> void:
+	can_take_damage = true
+
+func update_health():
+	var healthbar = $healthbar
+
+	if health >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true
+
+	

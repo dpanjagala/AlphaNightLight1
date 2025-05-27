@@ -6,16 +6,21 @@ var health = 100
 var player_alive = true
 var attack_ip = false
 
-const SPEED = 100
+const SPEED = 200
 var current_dir = "none"
 
 @onready var anim = $AnimatedSprite2D
 @onready var deal_attack_timer = $deal_attack_timer 
+@onready var cam = $Camera2D
+
 
 func _ready():
+	cam.make_current()
 	anim.scale = Vector2(2, 2) 
 	anim.play("front_idle")
 	print("🔍 deal_attack_timer is: ", deal_attack_timer) 
+	print("📸 Camera2D is: ", cam)
+	
 
 func _physics_process(delta):
 	if player_alive:
