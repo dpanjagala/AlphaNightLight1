@@ -18,8 +18,8 @@ func _ready():
 	cam.make_current()
 	anim.scale = Vector2(2, 2) 
 	anim.play("front_idle")
-	print("🔍 deal_attack_timer is: ", deal_attack_timer) 
-	print("📸 Camera2D is: ", cam)
+	print(" deal_attack_timer is: ", deal_attack_timer) 
+	print(" Camera2D is: ", cam)
 	
 
 func _physics_process(delta):
@@ -124,7 +124,7 @@ func attack():
 		if deal_attack_timer:
 			deal_attack_timer.start()
 		else:
-			print("⚠️ Timer is missing at runtime.")
+			print(" Timer is missing at runtime.")
 
 func _on_deal_attack_timer_timeout() -> void:
 	if deal_attack_timer:

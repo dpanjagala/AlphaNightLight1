@@ -265,3 +265,7 @@ shape = SubResource("RectangleShape2D_i7141")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
 polygon = PackedVector2Array(4, -6, 264, -2, 3072, 2, 3096, 116, 3386, 140, 3404, 222, 4098, 236, 4098, 16, 4526, 10, 4544, 2030, -12, 2054, 0, -6, -66, 32, -304, 372, -424, 1288, -368, 2142, -430, 2504, -430, 2504, 618, 2536, 2268, 2548, 3894, 2580, 4748, 2404, 5174, 1876, 5116, 1110, 5142, 256, 5066, 36, 4910, -610, 3170, -640, 2568, -596, 1746, -566, 114, -616, 60, -248, 2, -10)
+
+[node name="pickup_item" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="pickup_item"]
