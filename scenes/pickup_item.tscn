@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm6hmokfmlqm4"]
+
+[ext_resource type="Script" uid="uid://dhvci8qcq348h" path="res://scripts/pickup_item.gd" id="1_oimud"]
+[ext_resource type="Texture2D" uid="uid://cfx865atxidwl" path="res://wood_log/OG_Wood_Logh.png" id="2_jvkj8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bncvo"]
+size = Vector2(144, 151)
+
+[node name="pickup_item" type="Area2D"]
+script = ExtResource("1_oimud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(489, 209)
+scale = Vector2(0.217188, 0.247917)
+texture = ExtResource("2_jvkj8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(484, 213)
+shape = SubResource("RectangleShape2D_bncvo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

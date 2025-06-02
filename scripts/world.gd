@@ -22,3 +22,7 @@ func _on_glowing_wood_body_entered(body):
 		$fire_anim.play("starting")
 		await $fire_anim.animation_finished
 		$fire_anim.play("burning")
+
+
+func _on_pickup_item_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

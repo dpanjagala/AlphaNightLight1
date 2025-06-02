@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bll2et3tv1wtp"
-path="res://.godot/imported/spr_ocean_wave_front_left_corner.png-17580f9144e4c8541691775e3a71d53c.ctex"
+uid="uid://cfx865atxidwl"
+path="res://.godot/imported/OG_Wood_Logh.png-d942c60a25488e65420d516f372f47b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Ocean Water TIle/spr_ocean_wave_front_left_corner.png"
-dest_files=["res://.godot/imported/spr_ocean_wave_front_left_corner.png-17580f9144e4c8541691775e3a71d53c.ctex"]
+source_file="res://wood_log/OG_Wood_Logh.png"
+dest_files=["res://.godot/imported/OG_Wood_Logh.png-d942c60a25488e65420d516f372f47b1.ctex"]
 
 [params]
 

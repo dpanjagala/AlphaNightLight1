@@ -28,11 +28,17 @@ func _physics_process(delta):
 		enemy_attack()
 		attack()
 
+		if Global.player_has_wood and Input.is_action_just_pressed("drop_item"):
+			drop_item()
+			print("current_dir:", current_dir)
+
 		if health <= 0:
 			player_alive = false
 			health = 0
 			print("Player has been killed")
 			self.queue_free()
+		
+
 
 func player_movement(delta):
 	var moving = false
@@ -63,6 +69,7 @@ func player_movement(delta):
 	play_anim(moving)
 	move_and_slide()
 
+
 func play_anim(moving: bool):
 	if attack_ip:
 		return  # Don't interrupt attack animations
@@ -81,16 +88,20 @@ func play_anim(moving: bool):
 			anim.flip_h = false
 			anim.play("back_walk" if moving else "back_idle")
 
+
 func player():
 	pass
+
 
 func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area.has_method("enemy"):
 		enemy_in_attack_range = true
 
+
 func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area.has_method("enemy"):
 		enemy_in_attack_range = false
+
 
 func enemy_attack(): 
 	if enemy_in_attack_range and enemy_attack_cooldown:
@@ -99,8 +110,10 @@ func enemy_attack():
 		$attack_cooldown.start()
 		print("Player health:", health)
 
+
 func _on_attack_cooldown_timeout() -> void:
 	enemy_attack_cooldown = true
+
 
 func attack():
 	var dir = current_dir
@@ -126,6 +139,7 @@ func attack():
 		else:
 			print(" Timer is missing at runtime.")
 
+
 func _on_deal_attack_timer_timeout() -> void:
 	if deal_attack_timer:
 		deal_attack_timer.stop()
@@ -133,8 +147,17 @@ func _on_deal_attack_timer_timeout() -> void:
 	Global.player_current_attack = false
 	attack_ip = false
 
+func drop_item():
+	Global.player_has_wood = false
 
+	var item_scene = preload("res://scenes/pickup_item.tscn")
+	var dropped_item = item_scene.instantiate()
 
+	#  Instead of adding to root, add to world (your current scene's top node)
+	var world = get_parent()  
+	world.add_child(dropped_item)
 
+	# 🎯 Use player's exact local position (which matches world if same parent)
+	dropped_item.position = position  # not global_position anymore
 
-				
+	print(" Dropped at position:", dropped_item.position)

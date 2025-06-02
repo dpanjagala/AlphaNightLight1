@@ -53,9 +53,17 @@ func deal_with_damage():
 		health -= 20
 		$take_damage_cooldown.start()
 		can_take_damage = false
-		print("slime health =", health)
+		print("💥 Slime health =", health)
+
 		if health <= 0:
-			self.queue_free()
+			reset_player_attack_animation()
+			queue_free()
+
+func reset_player_attack_animation():
+	if player != null:
+		player.attack_ip = false
+		Global.player_current_attack = false
+		print("✅ attack_ip reset for player")
 
 func _on_take_damage_cooldown_timeout() -> void:
 	can_take_damage = true
@@ -67,5 +75,6 @@ func update_health():
 		healthbar.visible = false
 	else:
 		healthbar.visible = true
+
 
 	

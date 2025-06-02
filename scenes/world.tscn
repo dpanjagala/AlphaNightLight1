@@ -1,6 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://bk42qmine6o0p"]
+[gd_scene load_steps=36 format=3 uid="uid://bk42qmine6o0p"]
 
-[ext_resource type="Script" uid="uid://d4jejdrkbia14" path="res://scenes/world.gd" id="1_e3hyu"]
+[ext_resource type="Script" uid="uid://d4jejdrkbia14" path="res://scripts/world.gd" id="1_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://6s1o8wnujmkj" path="res://char and prop/tilesets/plains.png" id="1_i7141"]
 [ext_resource type="Texture2D" uid="uid://bvu7qte2am2le" path="res://char and prop/tilesets/grass.png" id="2_4mrxx"]
 [ext_resource type="Texture2D" uid="uid://dc34w7kxg4m63" path="res://char and prop/objects/objects.png" id="3_7r4gi"]
@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://b2fdq1kpmfykl" path="res://original/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Campfire/spr_campfire_idle.png" id="5_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://dbqikwa8kwmef" path="res://original/player.tscn" id="6_q5onr"]
 [ext_resource type="PackedScene" uid="uid://cet5a4863rh3b" path="res://scenes/enemy.tscn" id="7_jhx03"]
-[ext_resource type="Texture2D" uid="uid://c081mjvu3k5yq" path="res://Animated Campfire - Copy/spr_campfire_burning.png" id="8_w7kh3"]
-[ext_resource type="Texture2D" uid="uid://dekqd8187q8jf" path="res://Animated Campfire - Copy/spr_campfire_idle.png" id="9_e3hyu"]
-[ext_resource type="Texture2D" uid="uid://jgniss6nnhc0" path="res://Animated Campfire - Copy/spr_campfire_starting.png" id="10_q5onr"]
+[ext_resource type="Texture2D" uid="uid://c081mjvu3k5yq" path="res://NightLight1/Animated Campfire/spr_campfire_burning.png" id="8_w7kh3"]
+[ext_resource type="Texture2D" uid="uid://dekqd8187q8jf" path="res://NightLight1/Animated Campfire/spr_campfire_idle.png" id="9_e3hyu"]
+[ext_resource type="Texture2D" uid="uid://jgniss6nnhc0" path="res://NightLight1/Animated Campfire/spr_campfire_starting.png" id="10_q5onr"]
+[ext_resource type="PackedScene" uid="uid://dm6hmokfmlqm4" path="res://scenes/pickup_item.tscn" id="12_q5onr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwbse"]
 texture = ExtResource("1_i7141")
@@ -370,7 +371,7 @@ position = Vector2(72, 390)
 scale = Vector2(3, 3)
 
 [node name="enemy" parent="." instance=ExtResource("7_jhx03")]
-position = Vector2(2124, 760)
+position = Vector2(1260, 908)
 
 [node name="boundary_left" type="StaticBody2D" parent="."]
 position = Vector2(10, 10)
@@ -383,11 +384,6 @@ shape = SubResource("RectangleShape2D_i7141")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
 polygon = PackedVector2Array(4, -6, 264, -2, 3072, 2, 3096, 116, 3386, 140, 3404, 222, 4098, 236, 4098, 16, 4526, 10, 4544, 2030, -12, 2054, 0, -6, -66, 32, -304, 372, -424, 1288, -368, 2142, -430, 2504, -430, 2504, 618, 2536, 2268, 2548, 3894, 2580, 4748, 2404, 5174, 1876, 5116, 1110, 5142, 256, 5066, 36, 4910, -610, 3170, -640, 2568, -596, 1746, -566, 114, -616, 60, -248, 2, -10)
-
-[node name="pickup_item" type="Area2D" parent="."]
-position = Vector2(0, -4)
-
-[node name="Sprite2D" type="Sprite2D" parent="pickup_item"]
 
 [node name="fire_anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(1712.5, 676)
@@ -411,5 +407,8 @@ offset_top = 20.0
 offset_right = 128.0
 offset_bottom = 43.0
 text = "Fire Time = 60"
+
+[node name="pickup_item" parent="." instance=ExtResource("12_q5onr")]
+position = Vector2(36, 534)
 
 [connection signal="timeout" from="fire_timer" to="." method="_on_fire_timer_timeout"]
