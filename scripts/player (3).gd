@@ -13,14 +13,12 @@ var current_dir = "none"
 @onready var deal_attack_timer = $deal_attack_timer 
 @onready var cam = $Camera2D
 
-
 func _ready():
 	cam.make_current()
 	anim.scale = Vector2(2, 2) 
 	anim.play("front_idle")
 	print(" deal_attack_timer is: ", deal_attack_timer) 
 	print(" Camera2D is: ", cam)
-	
 
 func _physics_process(delta):
 	if player_alive:
@@ -37,8 +35,6 @@ func _physics_process(delta):
 			health = 0
 			print("Player has been killed")
 			self.queue_free()
-		
-
 
 func player_movement(delta):
 	var moving = false
@@ -69,7 +65,6 @@ func player_movement(delta):
 	play_anim(moving)
 	move_and_slide()
 
-
 func play_anim(moving: bool):
 	if attack_ip:
 		return  # Don't interrupt attack animations
@@ -88,20 +83,16 @@ func play_anim(moving: bool):
 			anim.flip_h = false
 			anim.play("back_walk" if moving else "back_idle")
 
-
 func player():
 	pass
-
 
 func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area.has_method("enemy"):
 		enemy_in_attack_range = true
 
-
 func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area.has_method("enemy"):
 		enemy_in_attack_range = false
-
 
 func enemy_attack(): 
 	if enemy_in_attack_range and enemy_attack_cooldown:
@@ -110,10 +101,8 @@ func enemy_attack():
 		$attack_cooldown.start()
 		print("Player health:", health)
 
-
 func _on_attack_cooldown_timeout() -> void:
 	enemy_attack_cooldown = true
-
 
 func attack():
 	var dir = current_dir
@@ -139,7 +128,6 @@ func attack():
 		else:
 			print(" Timer is missing at runtime.")
 
-
 func _on_deal_attack_timer_timeout() -> void:
 	if deal_attack_timer:
 		deal_attack_timer.stop()
@@ -152,12 +140,15 @@ func drop_item():
 
 	var item_scene = preload("res://scenes/pickup_item.tscn")
 	var dropped_item = item_scene.instantiate()
+	get_parent().add_child(dropped_item)
 
-	#  Instead of adding to root, add to world (your current scene's top node)
-	var world = get_parent()  
-	world.add_child(dropped_item)
+	# Drop just in front of player
+	var offset = Vector2(0, 16)
+	match current_dir:
+		"up": offset = Vector2(0, -16)
+		"down": offset = Vector2(0, 16)
+		"left": offset = Vector2(-16, 0)
+		"right": offset = Vector2(16, 0)
 
-	# 🎯 Use player's exact local position (which matches world if same parent)
-	dropped_item.position = position  # not global_position anymore
-
-	print(" Dropped at position:", dropped_item.position)
+	dropped_item.position = position + offset
+	print("🪵 Dropped log at:", dropped_item.position)

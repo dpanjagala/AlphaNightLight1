@@ -22,8 +22,10 @@ Global="*res://scripts/global.gd"
 [display]
 
 window/size/viewport_width=960
+window/size/viewport_height=640
 window/size/initial_screen=3
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -51,3 +53,4 @@ drop_item={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.0476726, 0.0199855, 0.00150029, 1)

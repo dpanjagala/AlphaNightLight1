@@ -21,7 +21,3 @@ func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, l
 
 func _on_attack_cooldown_timeout() -> void:
 	pass # Replace with function body.
-
-
-func _on_deal_attack_timer_timeout() -> void:
-	pass # Replace with function body.
