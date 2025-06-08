@@ -1,7 +1,7 @@
 extends Node2D
 
 var is_day = true
-var fire_time = 120  # Initial fire time
+var fire_time = 90  # Initial fire time
 @onready var canvas_mod = $CanvasModulate
 
 func _ready():
@@ -12,6 +12,10 @@ func _on_fire_timer_timeout():
 	fire_time -= 1
 	$CanvasLayer/fire_label.text = "Fire Time: " + str(fire_time)
 
+	if fire_time == 60:
+		$fire_anim.play("dim")  # 🔥 Fire dims after 60s
+		canvas_mod.color = Color(0.7, 0.7, 0.85, 0.75)  # Dim environment lighting too
+
 	if fire_time <= 0:
 		$fire_anim.play("idle")
 		get_tree().paused = true
@@ -20,8 +24,8 @@ func _on_campfire_body_entered(body):
 	if body.name == "pickup_item" and body.carried_by_player:
 		fire_time += 10  # Add time when log is placed
 		body.queue_free()  # Make the log disappear
-		$fire_anim.play("burning")  # 🔥 Fire Reignition Still Works
-
+		$fire_anim.play("burning")  # Reignite fire
+		canvas_mod.color = Color(1, 1, 1, 1)  # Restore light to normal
 
 func _on_day_night_timer_timeout():
 	is_day = !is_day

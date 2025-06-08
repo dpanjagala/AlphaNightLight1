@@ -93,6 +93,11 @@ func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, 
 func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area.has_method("enemy"):
 		enemy_in_attack_range = false
+	
+func _on_AnimatedSprite2D_animation_finished():
+	if anim.animation == "side_attack" or anim.animation == "front_attack" or anim.animation == "back_attack":
+		attack_ip = false
+
 
 func enemy_attack(): 
 	if enemy_in_attack_range and enemy_attack_cooldown:
@@ -140,15 +145,9 @@ func drop_item():
 
 	var item_scene = preload("res://scenes/pickup_item.tscn")
 	var dropped_item = item_scene.instantiate()
-	get_parent().add_child(dropped_item)
+	
+	var world = get_tree().get_root().get_node("world")
+	world.add_child(dropped_item)
+	dropped_item.global_position = self.global_position  # Use global_position to avoid offset issues
 
-	# Drop just in front of player
-	var offset = Vector2(0, 16)
-	match current_dir:
-		"up": offset = Vector2(0, -16)
-		"down": offset = Vector2(0, 16)
-		"left": offset = Vector2(-16, 0)
-		"right": offset = Vector2(16, 0)
-
-	dropped_item.position = position + offset
-	print("🪵 Dropped log at:", dropped_item.position)
+	print("🪵 Dropped log at:", dropped_item.global_position)

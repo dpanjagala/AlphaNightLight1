@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bk42qmine6o0p"]
+[gd_scene load_steps=40 format=3 uid="uid://bk42qmine6o0p"]
 
 [ext_resource type="Script" uid="uid://d4jejdrkbia14" path="res://scripts/world.gd" id="1_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://6s1o8wnujmkj" path="res://char and prop/tilesets/plains.png" id="1_i7141"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cet5a4863rh3b" path="res://scenes/enemy.tscn" id="7_jhx03"]
 [ext_resource type="Texture2D" uid="uid://c081mjvu3k5yq" path="res://NightLight1/Animated Campfire/spr_campfire_burning.png" id="8_w7kh3"]
 [ext_resource type="Texture2D" uid="uid://dekqd8187q8jf" path="res://NightLight1/Animated Campfire/spr_campfire_idle.png" id="9_e3hyu"]
-[ext_resource type="Texture2D" uid="uid://jgniss6nnhc0" path="res://Animated Campfire - Copy/spr_campfire_starting.png" id="10_jhx03"]
 [ext_resource type="Texture2D" uid="uid://jgniss6nnhc0" path="res://NightLight1/Animated Campfire/spr_campfire_starting.png" id="10_q5onr"]
 [ext_resource type="PackedScene" uid="uid://dm6hmokfmlqm4" path="res://scenes/pickup_item.tscn" id="12_q5onr"]
 
@@ -257,15 +256,15 @@ atlas = ExtResource("8_w7kh3")
 region = Rect2(224, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts3gi"]
-atlas = ExtResource("10_jhx03")
+atlas = ExtResource("10_q5onr")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nbtd"]
-atlas = ExtResource("10_jhx03")
+atlas = ExtResource("10_q5onr")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37qwj"]
-atlas = ExtResource("10_jhx03")
+atlas = ExtResource("10_q5onr")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2lf6f"]
@@ -431,8 +430,7 @@ polygon = PackedVector2Array(4, -6, 264, -2, 3072, 2, 3096, 116, 3386, 140, 3404
 position = Vector2(1712.5, 676)
 scale = Vector2(5.46875, 3.4375)
 sprite_frames = SubResource("SpriteFrames_i7141")
-animation = &"burning"
-frame_progress = 0.0082227
+animation = &"dim"
 
 [node name="fire_blocker" type="StaticBody2D" parent="fire_anim"]
 
@@ -457,21 +455,21 @@ offset_right = 128.0
 offset_bottom = 43.0
 text = "Fire Time = 60"
 
-[node name="pickup_item" parent="." instance=ExtResource("12_q5onr")]
-position = Vector2(36, 534)
-scale = Vector2(0.7, 0.7)
-
-[node name="pickup_item" parent="pickup_item" instance=ExtResource("12_q5onr")]
-position = Vector2(3945.71, -331.429)
-
-[node name="pickup_item2" parent="pickup_item" instance=ExtResource("12_q5onr")]
-position = Vector2(277.143, 1345.71)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(-22, 18)
 
 [node name="day_night_timer" type="Timer" parent="CanvasModulate"]
 wait_time = 60.0
 autostart = true
+
+[node name="pickup_item" parent="." instance=ExtResource("12_q5onr")]
+position = Vector2(510, 804)
+
+[node name="pickup_item2" parent="." instance=ExtResource("12_q5onr")]
+position = Vector2(2416, 528)
+
+[node name="pickup_item3" parent="." instance=ExtResource("12_q5onr")]
+position = Vector2(1020, 1528)
 
 [connection signal="body_entered" from="fire_anim/fire_area" to="." method="_on_fire_area_body_entered"]
 [connection signal="timeout" from="fire_timer" to="." method="_on_fire_timer_timeout"]
