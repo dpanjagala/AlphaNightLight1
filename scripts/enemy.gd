@@ -71,6 +71,9 @@ func update_health():
 
 	if health < max_health:
 		healthbar.visible = true
+		
+
+
 
 
 

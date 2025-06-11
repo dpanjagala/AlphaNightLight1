@@ -6,21 +6,29 @@ var health = 100
 var player_alive = true
 var attack_ip = false
 
-const SPEED = 100
+const SPEED = 200
 var current_dir = "none"
 
 @onready var anim = $AnimatedSprite2D
-@onready var deal_attack_timer = $deal_attack_timer  # ✅ Prevents null instance error
+@onready var deal_attack_timer = $deal_attack_timer 
+@onready var cam = $Camera2D
 
 func _ready():
+	cam.make_current()
+	anim.scale = Vector2(2, 2) 
 	anim.play("front_idle")
-	print("🔍 deal_attack_timer is: ", deal_attack_timer)  # Debug to confirm timer exists
+	print(" deal_attack_timer is: ", deal_attack_timer) 
+	print(" Camera2D is: ", cam)
 
 func _physics_process(delta):
 	if player_alive:
 		player_movement(delta)
 		enemy_attack()
 		attack()
+
+		if Global.player_has_wood and Input.is_action_just_pressed("drop_item"):
+			drop_item()
+			print("current_dir:", current_dir)
 
 		if health <= 0:
 			player_alive = false
@@ -86,6 +94,10 @@ func _on_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, l
 	if area.has_method("enemy"):
 		enemy_in_attack_range = false
 
+func _on_AnimatedSprite2D_animation_finished():
+	if anim.animation == "side_attack" or anim.animation == "front_attack" or anim.animation == "back_attack":
+		attack_ip = false
+
 func enemy_attack(): 
 	if enemy_in_attack_range and enemy_attack_cooldown:
 		health -= 20
@@ -100,8 +112,8 @@ func attack():
 	var dir = current_dir
 
 	if Input.is_action_just_pressed("attack"):
-		Global.player_current_attack = true 
 		attack_ip = true
+		Global.player_current_attack = true  # optional if needed for other logic
 
 		match dir:
 			"right":
@@ -117,8 +129,6 @@ func attack():
 
 		if deal_attack_timer:
 			deal_attack_timer.start()
-		else:
-			print("⚠️ Timer is missing at runtime.")
 
 func _on_deal_attack_timer_timeout() -> void:
 	if deal_attack_timer:
@@ -127,7 +137,32 @@ func _on_deal_attack_timer_timeout() -> void:
 	Global.player_current_attack = false
 	attack_ip = false
 
+	match current_dir:
+		"right":
+			anim.flip_h = false
+			anim.play("side_idle")
+		"left":
+			anim.flip_h = true
+			anim.play("side_idle")
+		"down":
+			anim.play("front_idle")
+		"up":
+			anim.play("back_idle")
 
+	print("✅ Attack finished ")
+
+
+func drop_item():
+	Global.player_has_wood = false
+
+	var item_scene = preload("res://scenes/pickup_item.tscn")
+	var dropped_item = item_scene.instantiate()
+	
+	var world = get_tree().get_root().get_node("world")
+	world.add_child(dropped_item)
+	dropped_item.global_position = self.global_position  # Use global_position to avoid offset issues
+
+	print("🪵 Dropped log at:", dropped_item.global_position)
 
 
 

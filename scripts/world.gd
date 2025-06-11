@@ -43,7 +43,6 @@ func _on_fire_area_body_entered(body: Node2D) -> void:
 		else:
 			print("⚠️ Fire not dimmed — log has no effect")
 
-
 		fire_time += 10
 		body.queue_free()
 		Global.player_has_wood = false

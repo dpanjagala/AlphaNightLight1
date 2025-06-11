@@ -1,9 +1,8 @@
-[gd_scene load_steps=41 format=4 uid="uid://bk42qmine6o0p"]
+[gd_scene load_steps=39 format=4 uid="uid://bk42qmine6o0p"]
 
-[ext_resource type="Script" uid="uid://d4jejdrkbia14" path="res://original/scripts/world.gd" id="1_e3hyu"]
+[ext_resource type="Script" uid="uid://d4jejdrkbia14" path="res://scripts/world.gd" id="1_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://6s1o8wnujmkj" path="res://char and prop/tilesets/plains.png" id="1_i7141"]
 [ext_resource type="Texture2D" uid="uid://bvu7qte2am2le" path="res://char and prop/tilesets/grass.png" id="2_4mrxx"]
-[ext_resource type="Texture2D" uid="uid://bto6vp8fg7m71" path="res://char and prop/tilesets/fences.png" id="4_w7kh3"]
 [ext_resource type="Texture2D" uid="uid://b2fdq1kpmfykl" path="res://original/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Campfire/spr_campfire_idle.png" id="5_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://cet5a4863rh3b" path="res://scenes/enemy.tscn" id="7_jhx03"]
 [ext_resource type="Texture2D" uid="uid://c081mjvu3k5yq" path="res://NightLight1/Animated Campfire/spr_campfire_burning.png" id="8_w7kh3"]
@@ -54,7 +53,7 @@ load_path = "res://.godot/imported/objects.png-a66516dd12ca29ebdc7a88f2c970d5c7.
 texture = SubResource("CompressedTexture2D_e3hyu")
 0:0/0 = 0
 0:0/0/y_sort_origin = 9
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.51802, 1.97845, 2.38973, 8, -3.34562, 8, -3.23746, 1.97845)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.82357, 1.59315, 3.50494, 1.27452, 2.23042, 8, -2.54905, 8)
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -157,7 +156,7 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 8:6/size_in_atlas = Vector2i(2, 3)
 8:6/0 = 0
 8:6/0/y_sort_origin = 9
-8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.69788, 12.0505, 3.23746, 13.6693, 4.46083, 20.711, -6.53193, 19.7551, -5.75548, 14.9283)
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.32851, 20.711, -4.77946, 19.1178)
 10:6/0 = 0
 11:6/0 = 0
 12:6/0 = 0
@@ -170,7 +169,7 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
 6:7/0/y_sort_origin = 9
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.75548, 4.31661, 4.13675, 4.31661, 5.39576, 10.6117, -6.83463, 12.2304)
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.9315, 3.82357, 11.4707, 3.18631, 13.3825, 13.0639, -1.27452, 16.2502, -11.7893, 15.6129, -15.9315, 12.4266)
 12:7/0 = 0
 13:7/0 = 0
 14:7/0 = 0
@@ -184,10 +183,11 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 15:8/0 = 0
 0:1/0 = 0
 0:1/0/y_sort_origin = 9
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.82357, 1.59315, 8, 2.54905, 3.82357, 8, -2.54905, 8)
 0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
 0:5/0/y_sort_origin = 9
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.1962, 10.8334, 5.09809, 10.8334, 2.86768, 20.3924, -6.69124, 19.7551)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.55892, 12.7452, 8.60303, 10.5148, 10.5148, 23.8973, -10.1962, 21.3483)
 10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
 10:7/0/y_sort_origin = 9
@@ -260,25 +260,6 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 14:12/0 = 0
 15:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ioo17"]
-texture = ExtResource("4_w7kh3")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wse8f"]
 texture = ExtResource("5_e3hyu")
 0:2/size_in_atlas = Vector2i(2, 2)
@@ -291,7 +272,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dwbse")
 sources/1 = SubResource("TileSetAtlasSource_pkg7o")
 sources/2 = SubResource("TileSetAtlasSource_gbfbk")
-sources/3 = SubResource("TileSetAtlasSource_ioo17")
 sources/4 = SubResource("TileSetAtlasSource_wse8f")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7141"]
@@ -524,7 +504,6 @@ shape = SubResource("RectangleShape2D_e3hyu")
 
 [node name="fire_area" type="Area2D" parent="fire_anim"]
 collision_layer = 3
-monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fire_anim/fire_area"]
 position = Vector2(2.10286, 4.07272)
