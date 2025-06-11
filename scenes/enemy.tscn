@@ -127,13 +127,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2u8i"]
-radius = 44.2283
+radius = 23.3482
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otto8"]
-radius = 42.4264
+radius = 27.3354
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gyqm"]
-radius = 51.6763
+radius = 39.4236
 
 [node name="enemy" type="CharacterBody2D"]
 scale = Vector2(3, 3)

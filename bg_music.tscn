@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cytocurw1n02s"]
+
+[ext_resource type="AudioStream" uid="uid://ckfhuuv3edbau" path="res://Fireflies.mp3" id="1_p1osb"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_p1osb")
+autoplay = true

@@ -112,8 +112,8 @@ func attack():
 	var dir = current_dir
 
 	if Input.is_action_just_pressed("attack"):
-		Global.player_current_attack = true 
 		attack_ip = true
+		Global.player_current_attack = true  # optional if needed for other logic
 
 		match dir:
 			"right":
@@ -129,15 +129,28 @@ func attack():
 
 		if deal_attack_timer:
 			deal_attack_timer.start()
-		else:
-			print(" Timer is missing at runtime.")
 
 func _on_deal_attack_timer_timeout() -> void:
 	if deal_attack_timer:
 		deal_attack_timer.stop()
 
-	Global.player_current_attack = true
-	attack_ip = true
+	Global.player_current_attack = false
+	attack_ip = false
+
+	match current_dir:
+		"right":
+			anim.flip_h = false
+			anim.play("side_idle")
+		"left":
+			anim.flip_h = true
+			anim.play("side_idle")
+		"down":
+			anim.play("front_idle")
+		"up":
+			anim.play("back_idle")
+
+	print("✅ Attack finished ")
+
 
 func drop_item():
 	Global.player_has_wood = false

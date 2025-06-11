@@ -8,6 +8,8 @@ size = Vector2(308, 270)
 
 [node name="pickup_item" type="Area2D"]
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_oimud")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
