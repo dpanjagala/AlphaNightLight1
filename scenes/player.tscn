@@ -22,32 +22,31 @@ region = Rect2(96, 384, 48, 48)
 atlas = ExtResource("2_qhqgy")
 region = Rect2(144, 384, 48, 48)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nty71"]
-load_path = "res://.godot/imported/player.png-756c49b81895e847193e3d133ae532bc.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i16gc"]
-atlas = SubResource("CompressedTexture2D_nty71")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("2_qhqgy")
 region = Rect2(0, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k0yft"]
-atlas = SubResource("CompressedTexture2D_nty71")
-region = Rect2(96, 96, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_reflk"]
-atlas = SubResource("CompressedTexture2D_nty71")
-region = Rect2(144, 96, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kix6m"]
-atlas = SubResource("CompressedTexture2D_nty71")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_qhqgy")
 region = Rect2(48, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rmpwi"]
-atlas = SubResource("CompressedTexture2D_nty71")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_qhqgy")
 region = Rect2(192, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a2fqo"]
-atlas = SubResource("CompressedTexture2D_nty71")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_qhqgy")
 region = Rect2(240, 96, 48, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nty71"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4wway"]
 atlas = SubResource("CompressedTexture2D_nty71")
@@ -234,22 +233,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i16gc")
+"texture": SubResource("AtlasTexture_g2els")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k0yft")
+"texture": SubResource("AtlasTexture_qhqgy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_reflk")
+"texture": SubResource("AtlasTexture_dqkch")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kix6m")
+"texture": SubResource("AtlasTexture_qlg0r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rmpwi")
+"texture": SubResource("AtlasTexture_tuyoq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a2fqo")
+"texture": SubResource("AtlasTexture_fjrip")
 }],
 "loop": true,
 "name": &"back_idle",
@@ -431,8 +430,7 @@ shape = SubResource("CircleShape2D_nty71")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1.66667, -11.3333)
 sprite_frames = SubResource("SpriteFrames_nty71")
-animation = &"side_walk"
-frame_progress = 0.0803863
+animation = &"back_idle"
 
 [node name="player_hitbox" type="Area2D" parent="."]
 

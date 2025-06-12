@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7eyf075wrmwc"
-path="res://.godot/imported/crab.png-efab31190c2ac08a3c3b7841a76865d8.ctex"
+path="res://.godot/imported/crab.png-4d70b1cce8e6b985e97ee4e4ab37a9ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Paradise_Asset_Pack_FREE/character/crab.png"
-dest_files=["res://.godot/imported/crab.png-efab31190c2ac08a3c3b7841a76865d8.ctex"]
+source_file="res://original/assets/NL Assets/Paradise_Asset_Pack_FREE/character/crab.png"
+dest_files=["res://.godot/imported/crab.png-4d70b1cce8e6b985e97ee4e4ab37a9ba.ctex"]
 
 [params]
 

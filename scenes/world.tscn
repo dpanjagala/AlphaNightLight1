@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d4jejdrkbia14" path="res://scripts/world.gd" id="1_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://6s1o8wnujmkj" path="res://char and prop/tilesets/plains.png" id="1_i7141"]
 [ext_resource type="Texture2D" uid="uid://bvu7qte2am2le" path="res://char and prop/tilesets/grass.png" id="2_4mrxx"]
-[ext_resource type="Texture2D" uid="uid://b2fdq1kpmfykl" path="res://original/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Campfire/spr_campfire_idle.png" id="5_e3hyu"]
+[ext_resource type="Texture2D" uid="uid://b2fdq1kpmfykl" path="res://NightLight1/assets/NL Assets/Forest/Pixelarium - GrassLands - Free Version/Pack content/Animated sprites/Animated Campfire/spr_campfire_idle.png" id="5_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://cet5a4863rh3b" path="res://scenes/enemy.tscn" id="7_jhx03"]
 [ext_resource type="Texture2D" uid="uid://c081mjvu3k5yq" path="res://NightLight1/Animated Campfire/spr_campfire_burning.png" id="8_w7kh3"]
 [ext_resource type="Texture2D" uid="uid://dekqd8187q8jf" path="res://NightLight1/Animated Campfire/spr_campfire_idle.png" id="9_e3hyu"]
@@ -47,7 +47,6 @@ texture = ExtResource("2_4mrxx")
 0:0/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e3hyu"]
-load_path = "res://.godot/imported/objects.png-a66516dd12ca29ebdc7a88f2c970d5c7.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbfbk"]
 texture = SubResource("CompressedTexture2D_e3hyu")
@@ -153,7 +152,6 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 6:6/0 = 0
 7:6/0 = 0
 7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.8334, 11.7893, 7.64714, 12.108, 7.96577, 24.5346, -9.55892, 21.3483)
-8:6/size_in_atlas = Vector2i(2, 3)
 8:6/0 = 0
 8:6/0/y_sort_origin = 9
 8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.32851, 20.711, -4.77946, 19.1178)
@@ -166,7 +164,6 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 3:7/0 = 0
 4:7/0 = 0
 5:7/0 = 0
-6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
 6:7/0/y_sort_origin = 9
 6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.9315, 3.82357, 11.4707, 3.18631, 13.3825, 13.0639, -1.27452, 16.2502, -11.7893, 15.6129, -15.9315, 12.4266)
@@ -184,15 +181,12 @@ texture = SubResource("CompressedTexture2D_e3hyu")
 0:1/0 = 0
 0:1/0/y_sort_origin = 9
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.82357, 1.59315, 8, 2.54905, 3.82357, 8, -2.54905, 8)
-0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
 0:5/0/y_sort_origin = 9
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.55892, 12.7452, 8.60303, 10.5148, 10.5148, 23.8973, -10.1962, 21.3483)
-10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
 10:7/0/y_sort_origin = 9
 10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.13675, 0.539577, -1.25901, -0.359716, 5.2159, 2.33816, -0.539576, 5.39576, -5.39576, 5.39576, -8, 2.51802)
-11:2/size_in_atlas = Vector2i(1, 2)
 11:2/0 = 0
 11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.59315, 8, 1.27452, 3.98288, 4.46083, -3.34562, 5.09809)
 0:9/0 = 0

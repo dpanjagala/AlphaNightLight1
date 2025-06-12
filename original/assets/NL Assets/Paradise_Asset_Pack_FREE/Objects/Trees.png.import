@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg2sfaypcwsrd"
-path="res://.godot/imported/Trees.png-95a54e7c4df210fadd93fce3fcde9ec2.ctex"
+path="res://.godot/imported/Trees.png-f641cb8a3e51ade746ec1a2b53fb1910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Paradise_Asset_Pack_FREE/Objects/Trees.png"
-dest_files=["res://.godot/imported/Trees.png-95a54e7c4df210fadd93fce3fcde9ec2.ctex"]
+source_file="res://original/assets/NL Assets/Paradise_Asset_Pack_FREE/Objects/Trees.png"
+dest_files=["res://.godot/imported/Trees.png-f641cb8a3e51ade746ec1a2b53fb1910.ctex"]
 
 [params]
 

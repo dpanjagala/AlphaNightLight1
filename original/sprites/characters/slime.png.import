@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmda1lv7dk74x"
-path="res://.godot/imported/slime.png-7e10a1033596810eb0af628d7b8220fa.ctex"
+path="res://.godot/imported/slime.png-2cb1747d204bfe6a2f84b8a1600b0bb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/sprites/characters/slime.png"
-dest_files=["res://.godot/imported/slime.png-7e10a1033596810eb0af628d7b8220fa.ctex"]
+source_file="res://original/sprites/characters/slime.png"
+dest_files=["res://.godot/imported/slime.png-2cb1747d204bfe6a2f84b8a1600b0bb0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwvffc55gvm3m"
-path="res://.godot/imported/Idle (8).png-682b0edd1c56eb0a8a7d07f45c595666.ctex"
+path="res://.godot/imported/Idle (8).png-01622b657ce13e7018aafd4c7d06db13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Man/png/Idle (8).png"
-dest_files=["res://.godot/imported/Idle (8).png-682b0edd1c56eb0a8a7d07f45c595666.ctex"]
+source_file="res://original/assets/NL Assets/Man/png/Idle (8).png"
+dest_files=["res://.godot/imported/Idle (8).png-01622b657ce13e7018aafd4c7d06db13.ctex"]
 
 [params]
 

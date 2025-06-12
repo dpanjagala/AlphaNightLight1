@@ -6,7 +6,6 @@
 radius = 16.0312
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nty71"]
-load_path = "res://.godot/imported/player.png-756c49b81895e847193e3d133ae532bc.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i16gc"]
 atlas = SubResource("CompressedTexture2D_nty71")

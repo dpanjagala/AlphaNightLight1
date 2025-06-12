@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqjtsj5vai723"
-path="res://.godot/imported/tilemap1.png-969eade1a6c658dcd35ec8b78bd4939c.ctex"
+path="res://.godot/imported/tilemap1.png-b0ae37ac99a5650e3310fa4711504c73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Paradise_Asset_Pack_FREE/FOR_TUTORIAL/tilemap1.png"
-dest_files=["res://.godot/imported/tilemap1.png-969eade1a6c658dcd35ec8b78bd4939c.ctex"]
+source_file="res://original/assets/NL Assets/Paradise_Asset_Pack_FREE/FOR_TUTORIAL/tilemap1.png"
+dest_files=["res://.godot/imported/tilemap1.png-b0ae37ac99a5650e3310fa4711504c73.ctex"]
 
 [params]
 

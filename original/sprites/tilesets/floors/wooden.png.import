@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dda3iskt5numj"
-path="res://.godot/imported/wooden.png-5c07a019aa2bf435a18fc94c5701a382.ctex"
+path="res://.godot/imported/wooden.png-10dcd529a7ea1c5fc7e03ba4688dad14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/sprites/tilesets/floors/wooden.png"
-dest_files=["res://.godot/imported/wooden.png-5c07a019aa2bf435a18fc94c5701a382.ctex"]
+source_file="res://original/sprites/tilesets/floors/wooden.png"
+dest_files=["res://.godot/imported/wooden.png-10dcd529a7ea1c5fc7e03ba4688dad14.ctex"]
 
 [params]
 

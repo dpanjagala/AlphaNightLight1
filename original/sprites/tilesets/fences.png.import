@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://04w4iy5wbc0w"
-path="res://.godot/imported/fences.png-8200ac019c30204ea783d243dc7694ea.ctex"
+path="res://.godot/imported/fences.png-72686f22b487e5064a20664c80df91ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/sprites/tilesets/fences.png"
-dest_files=["res://.godot/imported/fences.png-8200ac019c30204ea783d243dc7694ea.ctex"]
+source_file="res://original/sprites/tilesets/fences.png"
+dest_files=["res://.godot/imported/fences.png-72686f22b487e5064a20664c80df91ca.ctex"]
 
 [params]
 

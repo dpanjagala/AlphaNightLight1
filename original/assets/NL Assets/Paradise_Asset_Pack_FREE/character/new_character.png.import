@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gelxop8g6sgm"
-path="res://.godot/imported/new_character.png-30b1e07e5289bb98c27ce5aae060978e.ctex"
+path="res://.godot/imported/new_character.png-36eaf6932ed4e4445f6e832fd0bf6117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Paradise_Asset_Pack_FREE/character/new_character.png"
-dest_files=["res://.godot/imported/new_character.png-30b1e07e5289bb98c27ce5aae060978e.ctex"]
+source_file="res://original/assets/NL Assets/Paradise_Asset_Pack_FREE/character/new_character.png"
+dest_files=["res://.godot/imported/new_character.png-36eaf6932ed4e4445f6e832fd0bf6117.ctex"]
 
 [params]
 

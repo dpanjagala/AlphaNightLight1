@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db82obdfuvrds"
-path="res://.godot/imported/Run (10).png-b192a5fd4135a03fa823fe3c929dab03.ctex"
+path="res://.godot/imported/Run (10).png-614538f75bd15c80184ce60ade73c8cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Man/png/Run (10).png"
-dest_files=["res://.godot/imported/Run (10).png-b192a5fd4135a03fa823fe3c929dab03.ctex"]
+source_file="res://original/assets/NL Assets/Man/png/Run (10).png"
+dest_files=["res://.godot/imported/Run (10).png-614538f75bd15c80184ce60ade73c8cd.ctex"]
 
 [params]
 

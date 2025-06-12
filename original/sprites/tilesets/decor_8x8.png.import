@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfg3btosgdwh6"
-path="res://.godot/imported/decor_8x8.png-e7d250bace888b9fae9036a693419e92.ctex"
+path="res://.godot/imported/decor_8x8.png-3e1805eda8d4e4fe8d7e76d84dbf0f1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/sprites/tilesets/decor_8x8.png"
-dest_files=["res://.godot/imported/decor_8x8.png-e7d250bace888b9fae9036a693419e92.ctex"]
+source_file="res://original/sprites/tilesets/decor_8x8.png"
+dest_files=["res://.godot/imported/decor_8x8.png-3e1805eda8d4e4fe8d7e76d84dbf0f1a.ctex"]
 
 [params]
 
