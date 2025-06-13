@@ -36,7 +36,7 @@ func _on_fire_area_body_entered(body: Node2D) -> void:
 
 		if $fire_anim.animation == "dim":
 			print("🔥 Log dropped into dim fire — reigniting")
-			fire_time += 20  # You can adjust this
+			fire_time += 20  #  Yan adjust this
 			$fire_anim.play("burning")
 			canvas_mod.color = Color(1, 1, 1, 1)  # Restore light
 			$reignite_timer.start()
