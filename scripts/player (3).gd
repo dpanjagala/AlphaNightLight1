@@ -14,11 +14,16 @@ var current_dir = "none"
 @onready var cam = $Camera2D
 
 func _ready():
-	cam.make_current()
-	anim.scale = Vector2(2, 2) 
+	if cam and cam.has_method("make_current"):
+		cam.make_current()
+	else:
+		print("⚠️ Camera2D not found or not ready.")
+
+	anim.scale = Vector2(2, 2)
 	anim.play("front_idle")
-	print(" deal_attack_timer is: ", deal_attack_timer) 
+	print(" deal_attack_timer is: ", deal_attack_timer)
 	print(" Camera2D is: ", cam)
+
 
 func _physics_process(delta):
 	if player_alive:
@@ -113,7 +118,7 @@ func attack():
 
 	if Input.is_action_just_pressed("attack"):
 		attack_ip = true
-		Global.player_current_attack = true  # optional if needed for other logic
+		Global.player_current_attack = true  
 
 		match dir:
 			"right":
@@ -160,6 +165,6 @@ func drop_item():
 	
 	var world = get_tree().get_root().get_node("world")
 	world.add_child(dropped_item)
-	dropped_item.global_position = self.global_position  # Use global_position to avoid offset issues
+	dropped_item.global_position = self.global_position  
 
 	print("🪵 Dropped log at:", dropped_item.global_position)

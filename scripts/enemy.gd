@@ -13,7 +13,7 @@ func _ready():
 	$AnimatedSprite2D.scale = Vector2(2, 2)
 	$healthbar.max_value = max_health
 	$healthbar.value = max_health
-	$healthbar.visible = false  # Hide until damage taken
+	$healthbar.visible = false  
 
 func _physics_process(delta):
 	deal_with_damage()

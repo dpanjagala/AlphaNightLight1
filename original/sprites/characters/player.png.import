@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eoj3ggpa2wyo"
-path="res://.godot/imported/player.png-f4ef29ea04706cbd5442e850e182900a.ctex"
+path="res://.godot/imported/player.png-08349af06b7438c6d1698ffa39106b63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/sprites/characters/player.png"
-dest_files=["res://.godot/imported/player.png-f4ef29ea04706cbd5442e850e182900a.ctex"]
+source_file="res://original/sprites/characters/player.png"
+dest_files=["res://.godot/imported/player.png-08349af06b7438c6d1698ffa39106b63.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb8qav3o2vq5r"
-path="res://.godot/imported/Walk (11).png-218c2b564eaea8d4db44c0ded769a5a3.ctex"
+path="res://.godot/imported/Walk (11).png-0acdd51d2532dc909c2dc3fd76c87daf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NightLight1/assets/NL Assets/Man/png/Walk (11).png"
-dest_files=["res://.godot/imported/Walk (11).png-218c2b564eaea8d4db44c0ded769a5a3.ctex"]
+source_file="res://original/assets/NL Assets/Man/png/Walk (11).png"
+dest_files=["res://.godot/imported/Walk (11).png-0acdd51d2532dc909c2dc3fd76c87daf.ctex"]
 
 [params]
 
